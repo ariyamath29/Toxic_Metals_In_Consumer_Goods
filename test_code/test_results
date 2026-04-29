@@ -1,0 +1,84 @@
+What this means:
+
+1. Handling of Missing and Unknown Values:
+This may bias results toward products and manufacturers underrepresenting risk in poorly documented categories.
+
+2. Hazard Threshold Assumptions:
+There is a lot of bias since many concentrations are unknown. Accounted for this in my analytic by 
+calculating the hazard rate as yes/yes+no instead of yes/all (including NA)
+
+
+
+Raw Results:
+
+--------Unknown Concentration Rate by Product Type----------
+(Food-Candy,0.8383458646616542)
+(Food Other,0.7930574098798397)
+(Dietary Supplement/Medications/Remedy,0.6714443219404631)
+(Food-Spice,0.5561764705882353)
+(Cosmetics,0.5552407932011332)
+(Toys/Children's Products,0.5311418685121108)
+(Paint Supplies,0.5)
+(Other,0.3584905660377358)
+(Religious powder,0.3111111111111111)
+(Tableware/Pottery,0.19528619528619529)
+(Jewelry,0.1864406779661017)
+(QA/QC - Lab test,0.0)
+--------Unknown Concentration Rate by Country----------
+val unknownByCountry: org.apache.spark.rdd.RDD[(String, Double)] = MapPartitionsRDD[127] at sortBy at C:/Users/ariya/BD_Project/test_code/BiasCheck.scala:6
+(SAINT KITTS AND NEVIS,1.0)
+(PERU,1.0)
+(ALBANIA,1.0)
+(HUNGARY,1.0)
+(PUERTO RICO,1.0)
+(INDONESIA,1.0)
+(CANADA,1.0)
+(OTHER AFRICAN,1.0)
+(COLOMBIA,1.0)
+(EL SALVADOR,1.0)
+(UNITED STATES MINOR OUTLYING ISLANDS,1.0)
+(SAINT LUCIA,1.0)
+(SOUTH AFRICA,1.0)
+(EAST INDIES (NOT SPECIFIED),1.0)
+(PHILIPPINES,1.0)
+(MYANMAR,1.0)
+(UKRAINE,1.0)
+(MALAYSIA,1.0)
+(DOMINICAN REPUBLIC,0.925)
+(HONDURAS,0.8571428571428571)
+--------NA Hazard Rate by Product Type----------
+val naByProduct: org.apache.spark.rdd.RDD[(String, Double)] = MapPartitionsRDD[135] at sortBy at C:/Users/ariya/BD_Project/test_code/BiasCheck.scala:6
+(QA/QC - Lab test,1.0)
+(Food-Candy,0.8383458646616542)
+(Food Other,0.7930574098798397)
+(Dietary Supplement/Medications/Remedy,0.6714443219404631)
+(Food-Spice,0.5561764705882353)
+(Cosmetics,0.5552407932011332)
+(Toys/Children's Products,0.5311418685121108)
+(Paint Supplies,0.5)
+(Other,0.37735849056603776)
+(Religious powder,0.3111111111111111)
+(Tableware/Pottery,0.19528619528619529)
+(Jewelry,0.1864406779661017)
+--------NA Hazard Rate by Country----------
+val naByCountry: org.apache.spark.rdd.RDD[(String, Double)] = MapPartitionsRDD[143] at sortBy at C:/Users/ariya/BD_Project/test_code/BiasCheck.scala:6
+(SAINT KITTS AND NEVIS,1.0)
+(PERU,1.0)
+(ALBANIA,1.0)
+(HUNGARY,1.0)
+(PUERTO RICO,1.0)
+(INDONESIA,1.0)
+(CANADA,1.0)
+(OTHER AFRICAN,1.0)
+(COLOMBIA,1.0)
+(EL SALVADOR,1.0)
+(UNITED STATES MINOR OUTLYING ISLANDS,1.0)
+(SAINT LUCIA,1.0)
+(SOUTH AFRICA,1.0)
+(EAST INDIES (NOT SPECIFIED),1.0)
+(PHILIPPINES,1.0)
+(MYANMAR,1.0)
+(UKRAINE,1.0)
+(MALAYSIA,1.0)
+(DOMINICAN REPUBLIC,0.925)
+(HONDURAS,0.8571428571428571)

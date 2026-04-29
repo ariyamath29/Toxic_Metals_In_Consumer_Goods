@@ -1,0 +1,11 @@
+
+## Input data locations:
+Raw:
+HDFS path: `/user/aam9811_nyu_edu/input/consumer_metals.csv`
+
+Cleaned:
+HDFS path: `/user/aam9811_nyu_edu/output/clean_consumer_metals`
+
+## Data Ingest:
+hdfs dfs -mkdir -p /user/aam9811_nyu_edu/input
+hdfs dfs -put consumer_metals.csv /user/aam9811_nyu_edu/input/
