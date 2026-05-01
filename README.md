@@ -4,6 +4,7 @@
 ## Project Summary
 This project analyzes the NYC Department of Health and Mental Hygiene dataset on toxic metal content in consumer products. The goal is to identify which product categories, manufacturers, and countries of origin are associated with the highest contamination risk. All analytics were developed using Spark Scala on NYU Dataproc, with HDFS used for storage and Hive used for structured access to cleaned output.
 
+## Read published story [here](https://medium.com/p/6155cb9d2b4e?postPublishedType=in)
 
 ## Directory Structure
 * `/ana_code`: Contains Spark Scala analytics code used to compute mean, median, mode, standard deviation, hazard rates, and rankings by product type, manufacturer, and country.
